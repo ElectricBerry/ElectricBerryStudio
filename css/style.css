@@ -4,6 +4,7 @@
   --electric: #b76cff;
   --dark: #0b0b10;
   --mid: #141425;
+  --widthNav: 65%;
 }
 
 h1, h2 {
@@ -103,36 +104,36 @@ button:hover {
     padding: 20px;
 }
 
-.game {
-    max-width: 300px;
-    text-align: center;
-    flex: 1 1 250px;
-    min-width: 250px;
-    transition: transform 0.3s ease;
-    overflow: hidden; /* this keeps the zoomed image inside */
+.biggame-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
 }
 
-.game img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.game, .biggame {
+  text-align: center;
+  flex: 1 1 250px;
+  min-width: 250px;
+  transition: transform 0.3s ease;
 }
 
-.game h3 {
-    font-size: 1.35rem;
-    color: var(--berry);
-    transition: color 0.3s ease;
+.game img, .biggame img {
+  width: 95%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Hover effect triggered by the whole card */
-.game:hover img {
-    transform: scale(1.05);
+.game h3, .biggame h3 {
+  font-size: 1.35rem;
+  color: var(--berry);
+  transition: color 0.3s ease;
 }
 
-.game:hover h3 {
-    color: white;
-}
+.game { max-width: 300px; }
+.biggame { max-width: 400px; }
 
 .team-list {
     display: flex;
@@ -182,7 +183,7 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 75%;
+  width: var(--widthNav);
   margin: 0px auto;
   padding: 5px 0;
   list-style: none;
@@ -215,10 +216,11 @@ footer {
 }
 
 #navPanel {
+    opacity: 75%;
   position: fixed;
   top: 0;
-  right: -300px; /* hidden by default */
-  width: 300px;
+  right: -400px; /* hidden by default */
+  width: 400px;
   height: 100%;
   background: #1a1a25;
   transition: right 0.4s ease;
@@ -226,7 +228,7 @@ footer {
 }
 
 #navPanel a {
-    width: 75%;
+    width: var(--widthNav);
     margin: 1px auto;
     display: block;
     text-align: right;
@@ -239,7 +241,7 @@ footer {
 }
 
 #navPanel p {
-    width: 75%;
+    width: var(--widthNav);
     margin: 1px auto;
     display: block;
     text-align: right;
@@ -252,7 +254,7 @@ footer {
 }
 
 #navPanel hr {
-    width: 75%;
+    width: var(--widthNav);
     margin: 0px auto;
     border: 1px solid var(--darkerberry);
 }

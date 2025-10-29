@@ -7,3 +7,19 @@
     transform: scale(1.15);
 }
 
+.game:hover img {
+    transform: scale(1.05);
+}
+
+.game:hover h3 {
+    color: white;
+}
+
+.biggame:hover img {
+    transform: scale(1.05);
+}
+
+.biggame:hover h3 {
+    color: white;
+}
+
