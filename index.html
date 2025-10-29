@@ -7,6 +7,8 @@
 
   <link rel="icon" type="image/png" href="images/BlueBerry.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/basic.css">
+  <link rel="stylesheet" href="css/hover.css">
 </head>
 
 <body>
@@ -16,48 +18,37 @@
       <h1>Electric Berry Studio</h1>
     </div>
 
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#games">Games</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
+    <button class="round-btn" id="menuBtn">☰</button>
+
+    <div id="navPanel">
+        <p>NAVIGATION</p>
+        <hr>
+        <a href="#home">HOME</a>
+        <hr>
+        <a href="#games">GAMES </a>
+
+        <p>SOCIALS</p>
+        <hr>
+        <ul class="socials">
+          <li>
+            <a href="https://www.youtube.com/@Electric_Berry" target="_blank" class="social">
+              <img src="images/YoutubeLogo.png" alt="YouTube Logo">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/electricberrystudio" target="_blank" class="social">
+              <img src="images/InstagramLogo.png" alt="Instagram Logo">
+            </a>
+          </li>
+        </ul>
+    </div>
+
   </header>
 
   <main>
     <section id="home" class="hero">
       <h1>Electric Berry Studio</h1>
       <h2>Building Joy Frame by Frame</h2>
-    </section>
-
-    <section id="games">
-      <h1>Our Games</h1>
-      <div class="game-list">
-        <div class="game">
-          <a href="https://www.roblox.com/games/16097368264/Cash-Clicker" target="_blank">
-            <img src="images/Games/CashClicker.png" alt="Cash Clicker">
-          </a>
-          <h3>Cash Clicker</h3>
-          <p>Click, earn, and grow your empire! With boosts, buildings, and upgrades, every click counts.</p>
-        </div>
-
-        <div class="game">
-          <a href="https://www.roblox.com/games/18768925743/Berry-Clicker" target="_blank">
-            <img src="images/Games/BerryClicker.png" alt="Berry Clicker">
-          </a>
-          <h3>Berry Clicker</h3>
-          <p>Harvest Berries. Simple.</p>
-        </div>
-
-        <div class="game">
-          <a href="https://www.roblox.com/games/105270515825921/Cash-Clicker-2" target="_blank">
-            <img src="images/Games/CashClicker2.png" alt="Cash Clicker 2">
-          </a>
-          <h3>Cash Clicker 2</h3>
-          <p>Click, earn, and grow your empire! With boosts, buildings, and upgrades, every click counts.</p>
-        </div>
-      </div>
     </section>
 
     <section id="about" class="about">
@@ -75,22 +66,38 @@
         </div>
       </div>
     </section>
+
+    <section id="games">
+      <h1>Games</h1>
+      <div class="game-list">
+        <div class="game">
+          <a href="https://www.roblox.com/games/16097368264/Cash-Clicker" target="_blank">
+            <img src="images/Games/CashClicker.png" alt="Cash Clicker">
+          </a>
+          <h3>Cash Clicker</h3>
+        </div>
+
+        <div class="game">
+          <a href="https://www.roblox.com/games/18768925743/Berry-Clicker" target="_blank">
+            <img src="images/Games/BerryClicker.png" alt="Berry Clicker">
+          </a>
+          <h3>Berry Clicker</h3>
+        </div>
+
+        <div class="game">
+          <a href="https://www.roblox.com/games/105270515825921/Cash-Clicker-2" target="_blank">
+            <img src="images/Games/CashClicker2.png" alt="Cash Clicker 2">
+          </a>
+          <h3>Cash Clicker 2</h3>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="socials">
-    <ul>
-      <li>
-        <a href="https://www.youtube.com/@Electric_Berry" target="_blank">
-          <img src="images/YoutubeLogo.png" alt="YouTube Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/electricberrystudio" target="_blank">
-          <img src="images/InstagramLogo.png" alt="Instagram Logo">
-        </a>
-      </li>
-    </ul>
+  <footer>
     <p>© 2025 Electric Berry Studio. All rights reserved.</p>
   </footer>
+
+  <script src="js/main.js"> </script>
 </body>
 </html>

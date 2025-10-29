@@ -1,21 +1,9 @@
 :root {
   --berry: #8ad4ff;
+  --darkerberry: #4d88aa;
   --electric: #b76cff;
   --dark: #0b0b10;
   --mid: #141425;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, 'Open Sans';
-}
-
-body {
-    background: var(--dark);
-    color: #f5f5f5;
-    line-height: 1.6;
 }
 
 h1, h2 {
@@ -30,7 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 5%;
+    padding: 20px;
     background: #111;
     position: sticky;
     top: 0;
@@ -116,31 +104,34 @@ button:hover {
 }
 
 .game {
-    background: #1a1a25;
-    padding: 12px;
-    border-radius: 10px;
     max-width: 300px;
     text-align: center;
     flex: 1 1 250px;
     min-width: 250px;
     transition: transform 0.3s ease;
+    overflow: hidden; /* this keeps the zoomed image inside */
 }
 
 .game img {
     width: 100%;
     border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .game h3 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
+    color: var(--berry);
+    transition: color 0.3s ease;
 }
 
-.game p {
-    font-size: 1.05rem; /* bigger game description */
+/* Hover effect triggered by the whole card */
+.game:hover img {
+    transform: scale(1.05);
 }
 
-.game:hover {
-    transform: scale(1.03);
+.game:hover h3 {
+    color: white;
 }
 
 .team-list {
@@ -187,16 +178,91 @@ footer {
     color: #888;
 }
 
-.socials ul {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    padding: 20px 0;
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 75%;
+  margin: 0px auto;
+  padding: 5px 0;
+  list-style: none;
 }
 
-.socials img {
-    max-width: 50px;
-    width: 100%;
+.socials li {
+  display: inline-block;
+}
+
+.round-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 20;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: var(--berry);
+
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.round-btn:hover {
+    transform: scale(1.15);
+    color: var(--berry);
+    background-color: #ffffff;
+}
+
+#navPanel {
+  position: fixed;
+  top: 0;
+  right: -300px; /* hidden by default */
+  width: 300px;
+  height: 100%;
+  background: #1a1a25;
+  transition: right 0.4s ease;
+  padding-top: 125px;
+}
+
+#navPanel a {
+    width: 75%;
+    margin: 1px auto;
+    display: block;
+    text-align: right;
+    font-size: 25px;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: var(--berry);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#navPanel p {
+    width: 75%;
+    margin: 1px auto;
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0px 0px;
+    color: var(--darkerberry);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#navPanel hr {
+    width: 75%;
+    margin: 0px auto;
+    border: 1px solid var(--darkerberry);
+}
+
+#navPanel a:hover {
+   color: #ffffff;
+}
+
+#navPanel.show {
+  right: 0; /* slides into view */
 }
 
 /* Responsive adjustments */
