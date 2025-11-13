@@ -1,0 +1,47 @@
+:root {
+  --berry: #8ad4ff;
+  --darkerberry: #4d88aa;
+  --electric: #b76cff;
+  --dark: #0b0b10;
+  --mid: #141425;
+  --widthNav: 65%;
+}
+
+.game-list, .biggame-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.game, .biggame {
+  text-align: center;
+  min-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.game img, .biggame img {
+  width: 95%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.game h3, .biggame h3 {
+  font-size: 1.35rem;
+  color: var(--berry);
+  transition: color 0.3s ease;
+}
+
+.game {
+  flex: 1 1 calc((100% - 4 * 10px) / 5); /* base ratio piece */
+  max-width: calc((100% - 4 * 10px) / 5);
+}
+
+.biggame {
+  flex: 1 1 calc(1.4 * ((100% - 4 * 20px) / 5)); /* 1.5x bigger */
+  max-width: calc(1.4 * ((100% - 4 * 20px) / 5));
+}

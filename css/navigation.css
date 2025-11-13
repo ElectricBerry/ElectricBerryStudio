@@ -1,0 +1,97 @@
+:root {
+  --berry: #8ad4ff;
+  --darkerberry: #4d88aa;
+  --electric: #b76cff;
+  --dark: #0b0b10;
+  --mid: #141425;
+  --widthNav: 65%;
+}
+
+#navPanel {
+    opacity: 75%;
+  position: fixed;
+  top: 0;
+  right: -400px; /* hidden by default */
+  width: 400px;
+  height: 100%;
+  background: #1a1a25;
+  transition: right 0.4s ease;
+  padding-top: 125px;
+}
+
+#navPanel a {
+    width: var(--widthNav);
+    margin: 1px auto;
+    display: block;
+    text-align: right;
+    font-size: 25px;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: var(--berry);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#navPanel p {
+    width: var(--widthNav);
+    margin: 1px auto;
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0px 0px;
+    color: var(--darkerberry);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#navPanel hr {
+    width: var(--widthNav);
+    margin: 0px auto;
+    border: 1px solid var(--darkerberry);
+}
+
+#navPanel a:hover {
+   color: #ffffff;
+}
+
+#navPanel.show {
+  right: 0; /* slides into view */
+}
+
+.round-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 20;
+  font-size: 25px;
+  margin: 0px;
+  color: #ffffff;
+  background-color: var(--berry);
+
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.round-btn:hover {
+    transform: scale(1.15);
+    background-color: #ffffff;
+    color: var(--berry);
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: var(--widthNav);
+  margin: 0px auto;
+  padding: 5px 0;
+  list-style: none;
+}
+
+.socials li {
+  display: inline-block;
+}
